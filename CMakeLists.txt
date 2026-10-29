@@ -161,15 +161,11 @@ find_package(GLEW REQUIRED)
 # glm
 find_package(GLM REQUIRED)
 
+# assimp
+find_package(assimp REQUIRED)
+
 # SpvGenTwo
 add_subdirectory(libs/SpvGenTwo)
-
-# assimp
-set(BUILD_SHARED_LIBS OFF CACHE BOOL "Static lib" FORCE)
-set(ASSIMP_BUILD_ASSIMP_TOOLS OFF CACHE BOOL "Assimp's tools" FORCE)
-set(ASSIMP_BUILD_TESTS OFF CACHE BOOL "Build tests" FORCE)
-set(ASSIMP_WERROR OFF CACHE BOOL "Warnings as errors" FORCE)
-add_subdirectory(libs/assimp)
 
 # glslang
 set(ENABLE_SPVREMAPPER OFF CACHE BOOL "Enables building of SPVRemapper" FORCE)

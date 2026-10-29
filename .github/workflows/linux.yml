@@ -8,7 +8,7 @@ jobs:
     container: ghcr.io/archlinux/archlinux:latest
     steps:
       - name: Install libs
-        run: pacman --noconfirm -Syyu git sdl2-compat glew glm gtk3 base-devel cmake
+        run: pacman --noconfirm -Syyu git sdl2-compat glew glm gtk3 base-devel cmake assimp
       - name: Checkout
         uses: actions/checkout@v3
         with:
