@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Install libs
-        run: pacman --noconfirm -S git sdl2-compat glew glm gtk3 base-devel
+        run: pacman --noconfirm -Syyu git sdl2-compat glew glm gtk3 base-devel
       - name: Checkout submodules
         run: git submodule update --init --recursive
       - name: cmake
