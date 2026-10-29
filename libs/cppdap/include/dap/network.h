@@ -17,6 +17,7 @@
 
 #include <functional>
 #include <memory>
+#include <cstdint>
 
 namespace dap {
 class ReaderWriter;
