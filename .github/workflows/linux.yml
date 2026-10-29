@@ -8,10 +8,10 @@ jobs:
     container:
       image: ghcr.io/archlinux/archlinux:latest
     steps:
-      - name: Checkout submodules
+      - name: Checkout
         uses: actions/checkout@v6
-        with:
-          submodules: true
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
       - name: Install libs
         run: pacman --noconfirm -S sdl2-compat glew glm gtk3 base-devel
       - name: cmake
