@@ -10,10 +10,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Install libs
+        run: pacman --noconfirm -S git sdl2-compat glew glm gtk3 base-devel
       - name: Checkout submodules
         run: git submodule update --init --recursive
-      - name: Install libs
-        run: pacman --noconfirm -S sdl2-compat glew glm gtk3 base-devel
       - name: cmake
         run: sudo cmake -DCMAKE_CXX_COMPILER=/usr/bin/g++-9 -DCMAKE_C_COMPILER=/usr/bin/gcc-9 .
       - name: make
